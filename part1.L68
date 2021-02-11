@@ -1,0 +1,40 @@
+00001000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.16.01
+Created On: 11/02/2021 10:44:52
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :
+00000000                             3  * Written by :Rauls
+00000000                             4  * Date       :
+00000000                             5  * Description:
+00000000                             6  *-----------------------------------------------------------
+00000000                             7      
+00001000                             8  START:  ORG    $1000       ; first instruction of program
+00001000  43F9 00001020              9          LEA    MESSAGE,A1
+00001006  103C 000E                 10          MOVE.B #14,D0
+0000100A  4E4F                      11          TRAP   #15
+0000100C                            12  
+0000100C  103C 0004                 13          MOVE.B #4,D0
+00001010  4E4F                      14          TRAP   #15  
+00001012                            15  
+00001012  103C 0003                 16          MOVE.B #3,D0
+00001016  4E4F                      17          TRAP #15 
+00001018                            18  
+00001018  11C0 1200                 19          MOVE.B D0,$1200
+0000101C                            20         
+0000101C  FFFF FFFF                 21          SIMHALT             ; halt simulator
+00001020                            22          
+00001020= 50 6C 65 61 73 65 ...     23  MESSAGE DC.B   'Please Enter Amount of Gamer Points: ',0    
+00001046                            24  * Put variables and constants here
+00001046                            25  
+00001046                            26      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+MESSAGE             1020
+START               1000
